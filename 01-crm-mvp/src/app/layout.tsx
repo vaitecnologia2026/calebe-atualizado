@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { TrackingScripts, TrackingNoscript } from "@/components/tracking/TrackingScripts";
 import { SessionProvider } from "@/components/providers/SessionProvider";
-import { auth } from "@/auth";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
@@ -34,8 +33,7 @@ export const viewport: Viewport = {
   maximumScale: 5
 };
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const session = await auth();
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={jakarta.variable}>
       <head>
@@ -43,7 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body>
         <TrackingNoscript />
-        <SessionProvider session={session}>{children}</SessionProvider>
+        <SessionProvider>{children}</SessionProvider>
       </body>
     </html>
   );
