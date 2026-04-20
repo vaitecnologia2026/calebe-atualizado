@@ -1,0 +1,51 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node
+node_modules/
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Env files (NUNCA commitar credenciais Supabase/DB)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Vercel
+.vercel
+
+# Coverage / testes
+coverage/
+
+# Prisma local
+prisma/*.db
+prisma/*.db-journal
+
+# Logs
+logs/
+*.log
+
+# Temporários
+*.tmp
+*.bak
