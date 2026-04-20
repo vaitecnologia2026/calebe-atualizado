@@ -27,10 +27,8 @@ next-env.d.ts
 
 # Env files (NUNCA commitar credenciais Supabase/DB)
 .env
-.env.local
-.env.*.local
-.env.production
-.env.development
+.env.*
+!.env.example
 
 # Vercel
 .vercel
